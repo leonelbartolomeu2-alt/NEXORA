@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXORA</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080b18;color:white;font-family:Arial,sans-serif}
+header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #252943}
+.logo{font-size:28px;font-weight:bold;color:#55aaff}
+nav a{color:white;text-decoration:none;margin:10px}
+.hero{text-align:center;padding:90px 20px;background:radial-gradient(circle,#192b55,#080b18 70%)}
+.hero h1{font-size:55px;margin:10px}
+.hero p{color:#b9c5df;font-size:18px}
+button{background:#347cff;color:white;border:0;padding:14px 25px;border-radius:9px;cursor:pointer}
+section{padding:45px 8%}
+h2{font-size:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
+.card{background:#151b32;padding:30px 18px;border:1px solid #293657;border-radius:15px;text-align:center}
+.card h3{color:#65aaff}
+.card p{color:#b9c5df}
+footer{text-align:center;padding:30px;color:#9ca8c5}
+@media(max-width:600px){.hero h1{font-size:38px}nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">NEXORA</div>
+<nav>
+<a href="#inicio">Início</a>
+<a href="#universo">Explorar</a>
+<a href="#planos">Planos</a>
+</nav>
+</header>
+
+<div class="hero" id="inicio">
+<p>WELCOME TO YOUR DIGITAL UNIVERSE</p>
+<h1>YOUR WORLD.<br>YOUR UNIVERSE.</h1>
+<p>Um universo. Infinitas possibilidades.</p>
+<button onclick="document.getElementById('universo').scrollIntoView({behavior:'smooth'})">EXPLORAR AGORA</button>
+</div>
+
+<section id="universo">
+<h2>Explora a NEXORA</h2>
+<div class="grid">
+<div class="card"><h3>🎬 Movies</h3><p>Filmes e séries.</p></div>
+<div class="card"><h3>🎮 Games</h3><p>Descobre jogos.</p></div>
+<div class="card"><h3>📚 Books</h3><p>Livros e conhecimento.</p></div>
+<div class="card"><h3>🎵 Sounds</h3><p>Música e áudio.</p></div>
+<div class="card"><h3>🌐 Connection</h3><p>Comunica e partilha.</p></div>
+<div class="card"><h3>🤖 NEXORA AI</h3><p>O teu assistente digital.</p></div>
+</div>
+</section>
+
+<section id="planos">
+<h2>Escolhe o teu plano</h2>
+<div class="grid">
+<div class="card"><h3>FREE</h3><p>Acesso gratuito</p><button onclick="alert('Plano Free')">Começar</button></div>
+<div class="card"><h3>STANDARD</h3><p>Mais possibilidades</p><button onclick="alert('Em breve')">Ver plano</button></div>
+<div class="card"><h3>PREMIUM</h3><p>A experiência completa</p><button onclick="alert('Em breve')">Ver plano</button></div>
+</div>
+</section>
+
+<footer>© 2026 NEXORA — Your Digital Universe</footer>
+</body>
+</html>
