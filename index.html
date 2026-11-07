@@ -45,7 +45,7 @@ footer{text-align:center;padding:30px;color:#9ca8c5}
 <h2>Explora a NEXORA</h2>
 <div class="grid">
 <div class="card" onclick="abrirSecao('Movies')" style="cursor:pointer"><h3>🎬 Movies</h3><p>Filmes e séries.</p></div>
-<div class="card" onclick="abrirSecao('Games')" style="cursor:pointer"><h3>🎮 Games</h3><p>Descobre jogos.</p></div>
+<div id="conteudo" style="display:none;"></div><div class="card" onclick="abrirSecao('Games')" style="cursor:pointer"><h3>🎮 Games</h3><p>Descobre jogos.</p></div>
 <div class="card" onclick="abrirSecao('Books')" style="cursor:pointer"><h3>📚 Books</h3><p>Livros e conhecimento.</p></div>
 <div class="card" onclick="abrirSecao('Sounds')" style="cursor:pointer"><h3>🎵 Sounds</h3><p>Música e áudio.</p></div>
   <div class="card" onclick="abrirSecao('Connection')" style="cursor:pointer"><h3>🌐 Connection</h3><p>Comunica e partilha.</p></div>
@@ -63,10 +63,17 @@ footer{text-align:center;padding:30px;color:#9ca8c5}
 </section>
 
 
-<footer>© 2026 NEXORA — Your Digital Universe</footer>
+<fooBNer>© 2026 NEXORA — Your Digital Universe</footer>
 <script>
 function abrirSecao(nome) {
-  const secoes = {
+  document.getElementById("conteudo").innerHTML = `
+    <h1>NEXORA ${nome}</h1>
+    <p>Bem-vindo à NEXORA ${nome}!</p>
+    <p>Aqui ficarão os conteúdos desta categoria.</p>
+    <button onclick="location.reload()">Voltar ao início</button>
+  `;
+  document.getElementById("conteudo").style.display = "block";
+}
     "Movies": "Bem-vindo ao NEXORA Movies! Aqui ficarão filmes e séries autorizados.",
     "Games": "Bem-vindo ao NEXORA Games! Aqui ficarão os jogos.",
     "Books": "Bem-vindo ao NEXORA Books! Aqui ficarão os livros e e-books.",
@@ -78,14 +85,14 @@ function abrirSecao(nome) {
   const mensagem = secoes[nome];
 
   if (mensagem) {
-    alert(mensagem);
+    alBrt(mensagem);
   }
 }
 </script>
 </body>
 </html>
-</body>
-
+</body>bn/
 </html>
 
 
+bn/
